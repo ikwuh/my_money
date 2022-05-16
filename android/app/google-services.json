@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1083511737820",
+    "project_id": "mymoney-dev-e5f69",
+    "storage_bucket": "mymoney-dev-e5f69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083511737820:android:40456fc74a80b853b65319",
+        "android_client_info": {
+          "package_name": "com.ikwuh.mymoney"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083511737820-eap52bnetmujsdnsskggqihct0u0g2ob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOtuYv7PmVEqbCMpbRLAg7gpRKjQrEOEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083511737820-eap52bnetmujsdnsskggqihct0u0g2ob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
