@@ -79,11 +79,11 @@ class _AccontsPageState extends State<AccontsPage> {
                 String _title = "";
                 String _balance = "";
                 return AccountAddDialog(
-                  onAdd: () async {
+                  onAdd: ()  {
                     Navigator.of(context).pop();
-                    await DatabaseService().addOrUpdateAccount(AccountTitleInfo(
+                     DatabaseService().addOrUpdateAccount(AccountTitleInfo(
                         title: _title, balance: _balance, author: user?.id, ));
-                   await loadData();
+;
                   },
                   onChangeTitle: (title) {
                     if(mounted)
@@ -275,12 +275,6 @@ class _AccountsListState extends State<AccountsList> {
             return AccontCard(
               accountInfo: accounts[i],
               onDismissed: () {
-                // if(mounted)
-                // setState(() {
-                //   accounts.add(AccountTitleInfo(
-                //       title: accounts[i].title, balance: accounts[i].balance));
-                // });
-                
                 print(this.accounts[i].uid);
                 db.deleteAccount(this.accounts[i]);
                 loadData();
@@ -301,10 +295,10 @@ class AccontCard extends StatelessWidget {
     required this.onDismissed,
   }) : super(key: key);
   
-  showOperations(context) {
-                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => OperationsPage(accountId: accountInfo.uid,)));
-                }
+  // showOperations(context) {
+  //                  Navigator.of(context).push(
+  //                     MaterialPageRoute(builder: (context) => OperationsPage(accountId: accountInfo.uid,)));
+  //               }
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -375,7 +369,10 @@ class AccontCard extends StatelessWidget {
                   size: 30,
                   color: Colors.white,
                 ),
-                onPressed: showOperations(context),
+                onPressed: (){
+                  Navigator.of(context).push(
+                       MaterialPageRoute(builder: (context) => OperationsPage(accountId: accountInfo.uid,)));
+                },//showOperations(context),
               ),
             ),
           ],
